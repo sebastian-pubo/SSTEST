@@ -1,9 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import jsPDF from "jspdf";
 import placeholderLogo from "./assets/placeholder-logo.png";
-const GLOBALS_KEY = "survey_suite_globals_v1";
-function loadGlobals(){ try { return JSON.parse(localStorage.getItem(GLOBALS_KEY) || "{}") || {}; } catch { return {}; } }
-
 const WET_USES = ["Kitchen", "Bathroom", "WC", "Utility"];
 const WINDOW_MATERIALS = ["Timber", "uPVC", "Other"];
 const DOOR_MATERIALS = ["Timber", "uPVC", "Other"];
@@ -166,8 +163,6 @@ function riskColors(level) {
 }
 
 export default function VentilationApp() {
-  const globals = loadGlobals();
-
   const [branding, setBranding] = useState({ companyName: "", logoDataUrl: "" });
 
 // Persist branding so company name/logo stay after refresh

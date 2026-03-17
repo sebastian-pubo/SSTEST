@@ -1,7 +1,7 @@
 {
-  "name": "survey-suite",
+  "name": "ventilation-assessment",
   "private": true,
-  "version": "1.1.1",
+  "version": "2.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
