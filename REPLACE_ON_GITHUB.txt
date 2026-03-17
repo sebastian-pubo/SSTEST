@@ -1,0 +1,35 @@
+SURVEY SUITE – v9.0 (Ventilation + HHSRS)
+
+✅ Added a home screen selector:
+   - Ventilation / Damp / Mould
+   - HHSRS Calculator
+
+✅ Added Light/Dark mode toggle (saved on device).
+✅ HHSRS module included (29 hazards) with a simple scoring model and PDF export.
+   IMPORTANT: If you already have your exact HHSRS logic from the other session,
+   paste it into src/HhsrsApp.jsx by replacing computeBand() and/or the UI fields.
+
+Upload to GitHub (replace everything):
+1) Unzip
+2) Upload EVERYTHING inside the folder to the ROOT of your repo (NOT the folder itself)
+3) Commit → Vercel redeploys automatically
+
+Local test:
+npm install
+npm run dev
+
+
+v1.1 note:
+- HHSRS module now uses the HHSRS score formula + A–J banding.
+- To use your exact workbook default profiles, replace src/hhsrs/hazardStats.js with the full object from your HTML (HAZARD_STATS).
+
+
+READY-TO-GO DATASET OPTION:
+- In HHSRS, click “Import dataset” and upload your old HHSRS HTML file.
+- The app will automatically extract HAZARD_STATS and save it locally on that device.
+- Use “Reset dataset” to revert.
+
+
+HHSRS PROFILE DEFAULTS (ANNEX D 2006):
+- Built-in hazard profile defaults are now based on the UK Government HHSRS Operating Guidance (Feb 2006), Annex D.
+- A copy of the dataset is included at /public/hhsrs_hazard_stats_annexd_2006.json.

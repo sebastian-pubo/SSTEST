@@ -1,0 +1,118 @@
+:root{
+  --bg:#f3f6fb;
+  --card:#ffffff;
+  --text:#0f172a;
+  --muted:#475569;
+  --border:#e2e8f0;
+  --shadow: 0 10px 30px rgba(2,8,23,.06);
+  --radius:16px;
+  font-family: Bierstadt, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--text);
+}
+*{box-sizing:border-box}
+body{margin:0;background: radial-gradient(1200px 600px at 10% 0%, #eef2ff 0%, var(--bg) 55%) fixed;}
+a{color:inherit}
+.container{max-width:1120px;margin:0 auto;padding:18px}
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:16px;
+  box-shadow:var(--shadow);
+}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{height:44px;max-width:260px;object-fit:contain;border-radius:10px}
+.h1{font-size:20px;font-weight:900;margin:0;letter-spacing:-.2px}
+.h2{font-size:16px;font-weight:900;margin:0;letter-spacing:-.1px}
+.small{font-size:12px;color:var(--muted);line-height:1.35}
+.row{display:grid;grid-template-columns:repeat(12,1fr);gap:10px}
+.field{display:flex;flex-direction:column;gap:6px}
+label{font-size:12px;color:#334155}
+input,select,textarea{
+  padding:10px 12px;
+  border:1px solid #d6deea;
+  border-radius:12px;
+  font-size:14px;
+  background:#fff;
+  outline:none;
+}
+input:focus,select:focus,textarea:focus{border-color:#94a3b8;box-shadow:0 0 0 3px rgba(148,163,184,.25)}
+textarea{min-height:96px;resize:vertical}
+.btn{
+  padding:10px 12px;
+  border:1px solid #0f172a;
+  border-radius:14px;
+  background:#0f172a;
+  color:#fff;
+  font-weight:900;
+  cursor:pointer;
+}
+.btn.secondary{background:#fff;color:#0f172a}
+.btn.ghost{background:transparent;color:#0f172a;border-color:#cbd5e1}
+.btn.danger{background:#b42318;border-color:#b42318}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:900;border:1px solid #ddd}
+.badge.green{background:#ecfdf3;border-color:#abefc6;color:#067647}
+.badge.amber{background:#fffaeb;border-color:#fedf89;color:#b54708}
+.badge.red{background:#fef3f2;border-color:#fecdca;color:#b42318}
+.hr{height:1px;background:linear-gradient(90deg, transparent, #e2e8f0, transparent);margin:12px 0}
+.thumbs{display:flex;gap:8px;flex-wrap:wrap}
+.thumbs img{height:54px;width:auto;border-radius:12px;border:1px solid #e2e8f0}
+.help{
+  background:linear-gradient(180deg,#f8fafc,#f1f5f9);
+  border:1px dashed #cbd5e1;
+  border-radius:14px;
+  padding:10px;
+  font-size:12px;
+  color:#334155;
+}
+.errors{background:#fff1f2;border:1px solid #fecdd3;border-radius:14px;padding:12px;font-size:12px;color:#9f1239}
+.errors ul{margin:8px 0 0 18px}
+.sectionNote{
+  font-size:12px;
+  color:#334155;
+  background:linear-gradient(180deg,#f1f5f9,#eaf0f7);
+  border:1px solid #cbd5e1;
+  border-radius:14px;
+  padding:10px;
+}
+.toggles{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:#0f172a;align-items:center}
+.toggle{display:flex;align-items:center;gap:8px;padding:8px 10px;border:1px solid #e2e8f0;border-radius:14px;background:#fff}
+.toggle input{transform:scale(1.15)}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border-radius:999px;border:1px solid #e2e8f0;background:#fff;font-size:12px;color:#0f172a}
+.kicker{font-size:12px;font-weight:900;color:#334155;text-transform:uppercase;letter-spacing:.1em}
+
+
+/* Theme system */
+[data-theme="dark"]{
+  --bg:#0b1220;
+  --card:#0f172a;
+  --text:#e5e7eb;
+  --muted:#a3b3c7;
+  --border:#243047;
+  --shadow: 0 12px 36px rgba(0,0,0,.35);
+}
+[data-theme="dark"] body{
+  background: radial-gradient(1100px 620px at 10% 0%, #111827 0%, var(--bg) 55%) fixed;
+}
+[data-theme="dark"] input,
+[data-theme="dark"] select,
+[data-theme="dark"] textarea{
+  background:#0b1220;
+  border-color:#243047;
+  color:var(--text);
+}
+[data-theme="dark"] .help{
+  background: linear-gradient(180deg,#0b1220,#0f172a);
+  border-color:#334155;
+  color:var(--text);
+}
+[data-theme="dark"] .sectionNote{
+  background: linear-gradient(180deg,#0b1220,#0f172a);
+  border-color:#334155;
+  color:var(--text);
+}
+[data-theme="dark"] .btn.secondary{background:#0b1220;color:var(--text);border-color:#334155}
+[data-theme="dark"] .btn.ghost{background:transparent;color:var(--text);border-color:#334155}
