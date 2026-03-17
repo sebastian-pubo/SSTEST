@@ -1,0 +1,4 @@
+Vercel-focused fix:
+- vite and @vitejs/plugin-react moved to dependencies
+- custom installCommand in vercel.json uses npm 10.9.2 with --include=dev
+- .npmrc forces production=false during install

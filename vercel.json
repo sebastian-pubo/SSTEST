@@ -7,5 +7,10 @@
       "src": "/.*",
       "dest": "/index.html"
     }
-  ]
+  ],
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "installCommand": "npx npm@10.9.2 install --include=dev --no-audit --no-fund",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist"
 }
